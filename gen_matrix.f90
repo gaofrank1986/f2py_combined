@@ -46,18 +46,21 @@ contains
         end do
 
         do inode = 1,nnf
+        write(110,*) "bmata",bmata(1,1)
             do ielem = 1,nelemf
 
                 call comp_link(ielem,inode,ii)
    !             call wrapper_func(0,ielem,inode,xp,yp,zp,amatrix,bmatrix,ii) 
-                call common_block(1,0,ielem,inode,amatrix,bmatrix)
+                call intg_branch(0,ielem,inode,xp,yp,zp,amatrix,bmatrix,ii) 
+                call common_block(0,0,ielem,inode,amatrix,bmatrix)
             end do ! ielem = 1,nelemf
 
             do ielem = nelemf+1,nelem
 
                 call comp_link(ielem,inode,ii) 
   !              call wrapper_func(0,ielem,inode,xp,yp,zp,amatrix,bmatrix,ii) 
-                call common_block(0,0,ielem,inode,amatrix,bmatrix)
+                call  intg_branch(1,ielem,inode,xp,yp,zp,amatrix,bmatrix,ii) 
+                call common_block(1,0,ielem,inode,amatrix,bmatrix)
             end do!ielem = nelemf+1,nelem
 
             param(inode,:) = param_local(1,:)
@@ -74,15 +77,19 @@ contains
  
         end do! inode   
         do inode = nnf+1,nnode
+        write(110,*) "bmata",bmata(1,1)
             do ielem = 1,nelemf
                 ii = 0
 !                call wrapper_func(1,ielem,inode,xp,yp,zp,amatrix,bmatrix,ii) 
+                call  intg_branch(1,ielem,inode,xp,yp,zp,amatrix,bmatrix,ii) 
                 call common_block(1,1,ielem,inode,amatrix,bmatrix)
             end do!ielem = 1,nelemf
 
             do ielem = nelemf+1,nelem
                 call comp_link(ielem,inode,ii)
- !               call wrapper_func(1,ielem,inode,xp,yp,zp,amatrix,bmatrix,ii) 
+ !               call wrapper_func(1,ielem,inode,xp,yp,zp,amatrix,bmatrix,ii)
+                call  intg_branch(1,ielem,inode,xp,yp,zp,amatrix,bmatrix,ii) 
+                call common_block(0,1,ielem,inode,amatrix,bmatrix)
             end do
         enddo
     end subroutine calc_matrix        
@@ -155,53 +162,54 @@ contains
             cur_node = NCON(IELEM,J)!current node id
             cur_nrml = NCOND(IELEM,J)!current nrml id
 
-            DO  IP=1, NSYS 
-                XSB=EX(IP)*XYZ(1,cur_node)
-                YSB=EY(IP)*XYZ(2,cur_node)
-                ZSB=       XYZ(3,cur_node)
+            do  ip=1, nsys 
+                xsb=ex(ip)*xyz(1,cur_node)
+                ysb=ey(ip)*xyz(2,cur_node)
+                zsb=       xyz(3,cur_node)
 
-                NX=EX(IP)*DXYZ(1,cur_nrml)
-                NY=EY(IP)*DXYZ(2,cur_nrml)
-                NZ=       DXYZ(3,cur_nrml)
+                nx=ex(ip)*dxyz(1,cur_nrml)
+                ny=ey(ip)*dxyz(2,cur_nrml)
+                nz=       dxyz(3,cur_nrml)
                 
-                CALL DINP(XSB,YSB,ZSB,DPOX,DPOY,DPOZ)       
-                DPDN=DPOX*NX+DPOY*NY+DPOZ*NZ 
-
-                DO  IS=1, NSYS    
-                    IF(cur_node.GT. NNF)  THEN
-                        if (r_flag .eq. 0) then
-                            AMATA(INODE,cur_node,IP)=AMATA(INODE,cur_node,IP)-&
-                                         &RSN(IS,IP)*AMATRIX(IS,J)
-                        else 
-                            AMATA(INODE,cur_node,IP)=AMATA(INODE,cur_node,IP)+&
-                                         &RSN(IS,IP)*BMATRIX(IS,J)
-                        endif
-                    ELSE
-                        if (r_flag.eq.1) then
-                        PHI=POXY(XSB,YSB,ZSB)
-                        BMATA(INODE,IP)=BMATA(INODE,IP)+RSN(IS,IP)*AMATRIX(IS,J)*PHI
+                call dinp(xsb,ysb,zsb,dpox,dpoy,dpoz)       
+                write(113,*) "xyzb",xsb,ysb,zsb
+                write(113,*) "nxyz",nx,ny,nz
+                dpdn=dpox*nx+dpoy
+                write(113,*) "dpoxyzb",dpox,dpoy,dpoz
+                dpdn=dpox*nx+dpoy**ny+dpoz*nz 
+                write(111,*) "dpdn",dpdn
+! (0,0) (1,0)
+                do  is=1, nsys    
+                    if (r_flag .eq. 0) then
+                        amata(inode,cur_node,ip)=amata(inode,cur_node,ip)+&
+                                         &rsn(is,ip)*bmatrix(is,j)
+                        bmata(inode,ip)=bmata(inode,ip)+rsn(is,ip)*&
+                                    &amatrix(is,j)*poxy(xsb,ysb,zsb)
+                    else 
+                        if(cur_node.gt. nnf)  then        
+                            amata(inode,cur_node,ip)=amata(inode,cur_node,ip)-&
+                                     &rsn(is,ip)*amatrix(is,j)
                         else
-                        BMATA(INODE,IP)=BMATA(INODE,IP)+RSN(IS,IP)*&
-                                        &AMATRIX(IS,J)*POXY(XSB,YSB,ZSB)
+                                phi=poxy(xsb,ysb,zsb)
+                                write(111,*) "phi",phi
+                                bmata(inode,ip)=bmata(inode,ip)+rsn(is,ip)*amatrix(is,j)*phi
                         endif
-                    ENDIF
-                    if (r_flag.eq.1) then
-
-                        BMATA(INODE,IP)=BMATA(INODE,IP)-RSN(IS,IP)*BMATRIX(IS,J)*DPDN 
-                    endif
-                ENDDO!IS
+                        bmata(inode,ip)=bmata(inode,ip)-rsn(is,ip)*bmatrix(is,j)*dpdn 
+                    end if
+                enddo!is
             
                 if (s_flag .eq.0) then
                     do i_param = 0,3                
-                        CALL DINP0(i,XSB,YSB,ZSB,PHI,DPOX,DPOY,DPOZ)       
-                        DPDN=DPOX*NX+DPOY*NY+DPOZ*NZ
+                        call dinp0(i,xsb,ysb,zsb,phi,dpox,dpoy,dpoz)       
+                        dpdn=dpox*nx+dpoy*ny+dpoz*nz
+                        write(111,*) "dpdn,phi",dpdn,phi
                         param_local = 0
-                        DO    IS=1, NSYS             
-                            param_local(IP,i_param+1)=param_local(IP,i_param+1)-RSN(IS,IP)&
-                                                        &*BMATRIX(IS,J)*DPDN 
-                            param_local(IP,i_param+1)=param_local(IP,i_param+1)+RSN(IS,IP)&
-                                                        &*AMATRIX(IS,J)*PHI
-                        ENDDO!is
+                        do  is=1, nsys             
+                            param_local(ip,i_param+1)=param_local(ip,i_param+1)-rsn(is,ip)&
+                                                        &*bmatrix(is,j)*dpdn 
+                            param_local(ip,i_param+1)=param_local(ip,i_param+1)+rsn(is,ip)&
+                                                        &*amatrix(is,j)*phi
+                        enddo!is
                     end do!i_param
                 end if
 
