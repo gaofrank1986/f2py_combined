@@ -34,7 +34,6 @@ module mesh
     ! nelemf => elem num in fs
     ! nnf => node num in fs
     
-    real(8),protected :: wk,h,beta,amp
     ! wave information
 
     integer,allocatable :: nodele(:,:),nodnoe(:),nodelj(:,:),nodqua(:) 
@@ -51,12 +50,9 @@ contains
       !REAL*8  PL_AMP(6),FORAMP
       !REAL*8  FCD_AMR,  FCD_AMI
     
-        OPEN(1, FILE='INPUT/DATIN.txt',      STATUS='OLD') 
         OPEN(2, FILE='INPUT/DATBDMS.txt',    STATUS='OLD') 
         OPEN(3, FILE='INPUT/DATWPMS.txt',    STATUS='OLD')
 
-        READ(1,*)      IFWKO
-        READ(1,*)      H, AMP, WK, BETA
         !==================body mesh================================
         READ(2,*)   ISYS 
         READ(2,*)   NELEMB, NNB, NNBD, IPOL
