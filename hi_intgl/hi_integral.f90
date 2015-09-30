@@ -4,7 +4,7 @@ module hi_intg
     
     implicit none 
     
-    include 'hi_const.f90'    
+    include './add_on/hi_const.f90'    
     integer,protected    ::  num_dim,num_node,num_nrml,num_elem
     integer,protected    ::  elem_nd_count,num_intgd
     real(8),protected    ::  hi_beta 
@@ -31,12 +31,12 @@ module hi_intg
     !src coordinate in global,src center point in global
     !private :: read_model_from_WAVDUT
 contains
-    include 'test6.f90'
-    include 'test3.f90'
-    include 'test2.f90'
-    include 'test.f90'
-    include 'hi_integrand.f90'        
-    include 'run_thru_elems.f90'    
+    include './add_on/test6.f90'
+    include './add_on/test3.f90'
+    include './add_on/test2.f90'
+    include './add_on/test.f90'
+    include './add_on/hi_integrand.f90'        
+    include './add_on/run_thru_elems.f90'    
     
     subroutine get_node_matrix(nd,ex_node_matrix)
         implicit none

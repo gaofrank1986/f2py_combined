@@ -6,7 +6,7 @@ module elem_intgl
     
 contains
     include 'ElemIntgl1.f90'
-    include 'tgreen.f90'
+    include './add_on/tgreen.f90'
 !  NORM_ELE0+TSING0
 !  NORM_INT0+SING_INT0
 ! ======================================================

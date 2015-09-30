@@ -108,7 +108,7 @@ contains
         
         node_max = max(nnode,nnoded)
         
-        allocate(xyz(3,node_max),dxyz(6,node_max))
+        allocate(xyz(3,node_max),dxyz(3,node_max))
         
         do ind = 1,nnode
             xyz(1:3,ind) = xyztp(1:3,ind)
