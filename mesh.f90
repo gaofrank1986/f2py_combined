@@ -96,6 +96,8 @@ contains
         close(1)
         close(3)
 
+        call convsb()
+        call prepare_mesh()
 
     end subroutine
 
