@@ -1,0 +1,1309 @@
+running build
+running config_cc
+unifing config_cc, config, build_clib, build_ext, build commands --compiler options
+running config_fc
+unifing config_fc, config, build_clib, build_ext, build commands --fcompiler options
+running build_src
+build_src
+building extension "test" sources
+f2py options: []
+f2py:> /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/testmodule.c
+creating /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7
+Reading fortran codes...
+	Reading file 'gen_matrix.f90' (format:free)
+	Reading file './mfunc/solid.f90' (format:free)
+	Reading file 'mesh.f90' (format:free)
+	Reading file 'mod_func.f90' (format:free)
+	Reading file './elem_proc/tripole_mod.f90' (format:free)
+	Reading file './elem_proc/extend_mesh.f90' (format:free)
+	Reading file './hi_intgl/hi_funcs.f90' (format:free)
+	Reading file './hi_intgl/hi_integral.f90' (format:free)
+	Reading file './hi_intgl/./add_on/hi_const.f90' (format:free)
+	Reading file './hi_intgl/./add_on/test6.f90' (format:free)
+	Reading file './hi_intgl/./add_on/test3.f90' (format:free)
+	Reading file './hi_intgl/./add_on/test2.f90' (format:free)
+	Reading file './hi_intgl/./add_on/test.f90' (format:free)
+	Reading file './hi_intgl/./add_on/hi_integrand.f90' (format:free)
+	Reading file './hi_intgl/./add_on/run_thru_elems.f90' (format:free)
+	Reading file './elem_proc/ElemIntgl0.f90' (format:free)
+	Reading file './elem_proc/./add_on/ElemIntgl1.f90' (format:fix)
+	Reading file './elem_proc/./add_on/tgreen.f90' (format:fix)
+crackline: groupcounter=3 groupname={0: '', 1: 'module', 2: 'interface', 3: 'module', 4: 'subroutine', 5: 'subroutine'}
+crackline: Mismatch of blocks encountered. Trying to fix it by assuming "end" statement.
+crackline: groupcounter=2 groupname={0: '', 1: 'module', 2: 'interface', 3: 'module', 4: 'subroutine', 5: 'subroutine'}
+crackline: Mismatch of blocks encountered. Trying to fix it by assuming "end" statement.
+crackline: groupcounter=1 groupname={0: '', 1: 'module', 2: 'interface', 3: 'module', 4: 'subroutine', 5: 'subroutine'}
+crackline: Mismatch of blocks encountered. Trying to fix it by assuming "end" statement.
+Post-processing...
+	Block: test
+			Block: gen_matrix
+In: :test:gen_matrix.f90:gen_matrix
+get_useparameters: no module mod_func info used by gen_matrix
+In: :test:gen_matrix.f90:gen_matrix
+get_useparameters: no module mesh info used by gen_matrix
+In: :test:gen_matrix.f90:gen_matrix
+get_parameters: got "invalid syntax (<string>, line 1)" on 'reshape((/1.,1.,1.,1., 1.,-1.,1.,-1., 1.,1.,-1.,-1., 1.,-1.,-1.,1./),(/4,4/))'
+In: :test:gen_matrix.f90:gen_matrix
+get_parameters: got "invalid syntax (<string>, line 1)" on '(/1.,-1.,-1.,1./)'
+In: :test:gen_matrix.f90:gen_matrix
+get_parameters: got "invalid syntax (<string>, line 1)" on '(/1.,1.,-1.,-1./)'
+				Block: solidangle
+In: :test:gen_matrix.f90:gen_matrix:solidangle
+get_useparameters: no module mod_func info used by solidangle
+In: :test:gen_matrix.f90:gen_matrix:solidangle
+get_useparameters: no module mesh info used by solidangle
+				Block: tangel6
+In: :test:gen_matrix.f90:gen_matrix:tangel6
+get_useparameters: no module mod_func info used by tangel6
+In: :test:gen_matrix.f90:gen_matrix:tangel6
+get_useparameters: no module mesh info used by tangel6
+				Block: domainfas
+In: :test:gen_matrix.f90:gen_matrix:domainfas
+get_useparameters: no module mod_func info used by domainfas
+In: :test:gen_matrix.f90:gen_matrix:domainfas
+get_useparameters: no module mesh info used by domainfas
+				Block: angle0
+In: :test:gen_matrix.f90:gen_matrix:angle0
+get_useparameters: no module mod_func info used by angle0
+In: :test:gen_matrix.f90:gen_matrix:angle0
+get_useparameters: no module mesh info used by angle0
+				Block: xysym
+In: :test:gen_matrix.f90:gen_matrix:xysym
+get_useparameters: no module mod_func info used by xysym
+In: :test:gen_matrix.f90:gen_matrix:xysym
+get_useparameters: no module mesh info used by xysym
+				Block: yzsym
+In: :test:gen_matrix.f90:gen_matrix:yzsym
+get_useparameters: no module mod_func info used by yzsym
+In: :test:gen_matrix.f90:gen_matrix:yzsym
+get_useparameters: no module mesh info used by yzsym
+				Block: zxsym
+In: :test:gen_matrix.f90:gen_matrix:zxsym
+get_useparameters: no module mod_func info used by zxsym
+In: :test:gen_matrix.f90:gen_matrix:zxsym
+get_useparameters: no module mesh info used by zxsym
+				Block: yzzxsym
+In: :test:gen_matrix.f90:gen_matrix:yzzxsym
+get_useparameters: no module mod_func info used by yzzxsym
+In: :test:gen_matrix.f90:gen_matrix:yzzxsym
+get_useparameters: no module mesh info used by yzzxsym
+				Block: test
+In: :test:gen_matrix.f90:gen_matrix:test
+get_useparameters: no module mod_func info used by test
+In: :test:gen_matrix.f90:gen_matrix:test
+get_useparameters: no module mesh info used by test
+				Block: calc_matrix
+In: :test:gen_matrix.f90:gen_matrix:calc_matrix
+get_useparameters: no module mod_func info used by calc_matrix
+In: :test:gen_matrix.f90:gen_matrix:calc_matrix
+get_useparameters: no module mesh info used by calc_matrix
+In: :test:gen_matrix.f90:gen_matrix:calc_matrix
+	getarrlen:variable "nnode" undefined
+				Block: intg_branch
+In: :test:gen_matrix.f90:gen_matrix:intg_branch
+get_useparameters: no module mod_func info used by intg_branch
+In: :test:gen_matrix.f90:gen_matrix:intg_branch
+get_useparameters: no module mesh info used by intg_branch
+				Block: comp_link
+In: :test:gen_matrix.f90:gen_matrix:comp_link
+get_useparameters: no module mod_func info used by comp_link
+In: :test:gen_matrix.f90:gen_matrix:comp_link
+get_useparameters: no module mesh info used by comp_link
+				Block: common_block
+In: :test:gen_matrix.f90:gen_matrix:common_block
+get_useparameters: no module mod_func info used by common_block
+In: :test:gen_matrix.f90:gen_matrix:common_block
+get_useparameters: no module mesh info used by common_block
+			Block: mesh
+				Block: read_mesh
+				Block: prepare_mesh
+				Block: meshfs4
+				Block: meshbd
+				Block: convsb
+			Block: mod_func
+				Block: eti
+				Block: poxy
+				Block: dpot
+				Block: dinp
+				Block: dinp0
+				Block: spfunc6
+				Block: spfunc8
+				Block: spfunc6_1
+				Block: spfunc8_1
+			Block: tripole_mod
+In: :test:./elem_proc/tripole_mod.f90:tripole_mod
+get_useparameters: no module extend_mesh info used by tripole_mod
+				Block: tripol
+In: :test:./elem_proc/tripole_mod.f90:tripole_mod:tripol
+get_useparameters: no module extend_mesh info used by tripol
+			Block: extend_mesh
+				Block: declare_var
+				Block: set_xyzc
+				Block: comp_gaussian_info
+			Block: hi_mod_funcs
+				Block: new_norm2
+				Block: new_norm3
+{}
+In: :test:./hi_intgl/hi_funcs.f90:hi_mod_funcs:gaussv
+vars2fortran: No typespec for argument "ngaus".
+{'attrspec': ['dimension(ngaus)']}
+In: :test:./hi_intgl/hi_funcs.f90:hi_mod_funcs:gaussv
+vars2fortran: No typespec for argument "gp".
+{'attrspec': ['dimension(ngaus)']}
+In: :test:./hi_intgl/hi_funcs.f90:hi_mod_funcs:gaussv
+vars2fortran: No typespec for argument "gw".
+				Block: gaussv
+{}
+In: :test:./hi_intgl/hi_funcs.f90:hi_mod_funcs:invsolvr
+vars2fortran: No typespec for argument "nrow".
+{}
+In: :test:./hi_intgl/hi_funcs.f90:hi_mod_funcs:invsolvr
+vars2fortran: No typespec for argument "ncol".
+{'attrspec': ['dimension(nrow,ncol)']}
+In: :test:./hi_intgl/hi_funcs.f90:hi_mod_funcs:invsolvr
+vars2fortran: No typespec for argument "a".
+{}
+In: :test:./hi_intgl/hi_funcs.f90:hi_mod_funcs:invsolvr
+vars2fortran: No typespec for argument "n".
+{}
+In: :test:./hi_intgl/hi_funcs.f90:hi_mod_funcs:invsolvr
+vars2fortran: No typespec for argument "indic".
+				Block: invsolvr
+				Block: shapef
+{}
+In: :test:./hi_intgl/hi_funcs.f90:hi_mod_funcs:dshape
+vars2fortran: No typespec for argument "ndim".
+{}
+In: :test:./hi_intgl/hi_funcs.f90:hi_mod_funcs:dshape
+vars2fortran: No typespec for argument "node".
+{'attrspec': ['dimension(*)']}
+In: :test:./hi_intgl/hi_funcs.f90:hi_mod_funcs:dshape
+vars2fortran: No typespec for argument "c".
+{'attrspec': ['dimension(3,*)']}
+In: :test:./hi_intgl/hi_funcs.f90:hi_mod_funcs:dshape
+vars2fortran: No typespec for argument "ck".
+{'attrspec': ['dimension(*)']}
+In: :test:./hi_intgl/hi_funcs.f90:hi_mod_funcs:dshape
+vars2fortran: No typespec for argument "x".
+{'attrspec': ['dimension(*)']}
+In: :test:./hi_intgl/hi_funcs.f90:hi_mod_funcs:dshape
+vars2fortran: No typespec for argument "cosn".
+{}
+In: :test:./hi_intgl/hi_funcs.f90:hi_mod_funcs:dshape
+vars2fortran: No typespec for argument "fjcb".
+{'attrspec': ['dimension(3,*)']}
+In: :test:./hi_intgl/hi_funcs.f90:hi_mod_funcs:dshape
+vars2fortran: No typespec for argument "gd".
+				Block: dshape
+			Block: hi_intg
+In: :test:./hi_intgl/hi_integral.f90:hi_intg
+get_parameters: got "invalid syntax (<string>, line 1)" on '(/-1.,-1.,1.,-1.,1.,1.,-1.,1.,0.,-1.,1.,0.,0.,1.,-1.,0.,0.,0./)'
+In: :test:./hi_intgl/hi_integral.f90:hi_intg
+get_parameters: got "invalid syntax (<string>, line 1)" on 'reshape((/1.,0.,0.,0.,1.,0.,0.,0.,1./),(/3,3/))'
+In: :test:./hi_intgl/hi_integral.f90:hi_intg
+get_parameters: got "invalid syntax (<string>, line 1)" on '(/-2,1,2,-1/)'
+In: :test:./hi_intgl/hi_integral.f90:hi_intg
+get_parameters: got "invalid syntax (<string>, line 1)" on '(/1,2,5, 2,3,6, 3,4,7, 4,1,8/)'
+In: :test:./hi_intgl/hi_integral.f90:hi_intg
+get_parameters: got "name 'datan' is not defined" on '4.e0*datan(1.e0)'
+				Block: compute_coeff_gh
+				Block: compute_coeff_g
+				Block: compute_coeff_b
+				Block: integrate_rho
+				Block: eval_singular_elem
+				Block: f_integrand
+				Block: set_npwg
+				Block: set_src_preset
+				Block: rim_elems
+				Block: get_node_matrix
+				Block: read_model_from_dat
+				Block: read_model_from_wavdut
+				Block: swap_result
+			Block: elem_intgl
+				Block: norm_ele1
+				Block: sing_ele1
+				Block: norm_int1
+				Block: green_func
+				Block: tgrn
+				Block: dtgrn
+				Block: dtgrn0
+				Block: dtgrn1
+				Block: green1
+Post-processing (stage 2)...
+	Block: test
+		Block: unknown_interface
+			Block: gen_matrix
+				Block: solidangle
+				Block: tangel6
+				Block: domainfas
+				Block: angle0
+				Block: xysym
+				Block: yzsym
+				Block: zxsym
+				Block: yzzxsym
+				Block: test
+				Block: calc_matrix
+				Block: intg_branch
+				Block: comp_link
+				Block: common_block
+			Block: mesh
+				Block: read_mesh
+				Block: prepare_mesh
+				Block: meshfs4
+				Block: meshbd
+				Block: convsb
+			Block: mod_func
+				Block: eti
+				Block: poxy
+				Block: dpot
+				Block: dinp
+				Block: dinp0
+				Block: spfunc6
+				Block: spfunc8
+				Block: spfunc6_1
+				Block: spfunc8_1
+			Block: tripole_mod
+				Block: tripol
+			Block: extend_mesh
+				Block: declare_var
+				Block: set_xyzc
+				Block: comp_gaussian_info
+			Block: hi_mod_funcs
+				Block: new_norm2
+				Block: new_norm3
+				Block: gaussv
+				Block: invsolvr
+				Block: shapef
+				Block: dshape
+			Block: hi_intg
+				Block: compute_coeff_gh
+				Block: compute_coeff_g
+				Block: compute_coeff_b
+				Block: integrate_rho
+				Block: eval_singular_elem
+				Block: f_integrand
+				Block: set_npwg
+				Block: set_src_preset
+				Block: rim_elems
+				Block: get_node_matrix
+				Block: read_model_from_dat
+				Block: read_model_from_wavdut
+				Block: swap_result
+			Block: elem_intgl
+				Block: norm_ele1
+				Block: sing_ele1
+				Block: norm_int1
+				Block: green_func
+				Block: tgrn
+				Block: dtgrn
+				Block: dtgrn0
+				Block: dtgrn1
+				Block: green1
+Building modules...
+	Building module "test"...
+		Constructing F90 module support for "gen_matrix"...
+		  Variables: param_local rsn ey ex bmata amata param
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+			Constructing wrapper function "gen_matrix.solidangle"...
+			  sangle = solidangle(inode,ncn,ncon,nodqua,h,xyz,dxyze,[nnode,nelem])
+			Constructing wrapper function "gen_matrix.tangel6"...
+			  txyz = tangel6(ielem,jnew,ncon,xyz,[nnode,nelem])
+			Constructing wrapper function "gen_matrix.domainfas"...
+			  domainfas(dxyzn,txyzn,mcele,ncont,nside,min_bn)
+			Constructing wrapper function "gen_matrix.angle0"...
+			  angle0(dxyzn,txyzn,mcele,ncont,nside,angle)
+			Constructing wrapper function "gen_matrix.xysym"...
+			  xysym(dxyzn,txyzn,mcele)
+			Constructing wrapper function "gen_matrix.yzsym"...
+			  yzsym(dxyzn,txyzn,mcele)
+			Constructing wrapper function "gen_matrix.zxsym"...
+			  zxsym(dxyzn,txyzn,mcele)
+			Constructing wrapper function "gen_matrix.yzzxsym"...
+			  yzzxsym(dxyzn,txyzn,mcele)
+			Constructing wrapper function "gen_matrix.test"...
+			  test()
+			Constructing wrapper function "gen_matrix.calc_matrix"...
+			  calc_matrix()
+			Constructing wrapper function "gen_matrix.intg_branch"...
+			  amatrix,bmatrix = intg_branch(flag,ielem,inode,xp,yp,zp,ii)
+			Constructing wrapper function "gen_matrix.comp_link"...
+			  ii = comp_link(ielem,inode)
+			Constructing wrapper function "gen_matrix.common_block"...
+			  common_block(r_flag,s_flag,ielem,inode,amatrix,bmatrix)
+		Constructing F90 module support for "mesh"...
+		  Variables: nodele nnoded nnf xyz nodelj nnb isys ncon ietype nelemb nelemf nodnoe nnode nodqua txyze dxyz nelem dxyze nsys nnbd wk beta ncn ncond amp xyze h
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+			Constructing wrapper function "mesh.read_mesh"...
+			  read_mesh()
+			Constructing wrapper function "mesh.prepare_mesh"...
+			  prepare_mesh()
+			Constructing wrapper function "mesh.meshfs4"...
+			  meshfs4()
+			Constructing wrapper function "mesh.meshbd"...
+			  meshbd(ncor)
+			Constructing wrapper function "mesh.convsb"...
+			  convsb()
+		Constructing F90 module support for "mod_func"...
+		  Variables: rampf timerk w1 g
+		Creating wrapper for Fortran function "eti"("eti")...
+			Constructing wrapper function "mod_func.eti"...
+			  eti = eti(x,y)
+		Creating wrapper for Fortran function "poxy"("poxy")...
+			Constructing wrapper function "mod_func.poxy"...
+			  poxy = poxy(x,y,z)
+		Creating wrapper for Fortran function "dpot"("dpot")...
+			Constructing wrapper function "mod_func.dpot"...
+			  dpot = dpot(x,y,z)
+			Constructing wrapper function "mod_func.dinp"...
+			  dpox,dpoy,dpoz = dinp(x,y,z)
+			Constructing wrapper function "mod_func.dinp0"...
+			  phi,dpox,dpoy,dpoz = dinp0(kind,x,y,z)
+			Constructing wrapper function "mod_func.spfunc6"...
+			  sf,dsf = spfunc6(si,eta)
+			Constructing wrapper function "mod_func.spfunc8"...
+			  sf,dsf = spfunc8(si,eta)
+			Constructing wrapper function "mod_func.spfunc6_1"...
+			  sf,dsf,ddsf = spfunc6_1(si,eta)
+			Constructing wrapper function "mod_func.spfunc8_1"...
+			  sf,dsf,ddsf = spfunc8_1(si,eta)
+		Constructing F90 module support for "tripole_mod"...
+		  Variables: nosamp xynod dxynod samnod
+			Constructing wrapper function "tripole_mod.tripol"...
+			  tripol(xyzc,nodnum,ncne,xyzt,dxyzt)
+		Constructing F90 module support for "extend_mesh"...
+		  Variables: sambxy xyzc xc samb yc dsamb zc
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+getarrdims:warning: assumed shape array, using 0 instead of ':'
+			Constructing wrapper function "extend_mesh.declare_var"...
+			  declare_var()
+			Constructing wrapper function "extend_mesh.set_xyzc"...
+			  set_xyzc(a,b,c)
+			Constructing wrapper function "extend_mesh.comp_gaussian_info"...
+			  comp_gaussian_info()
+		Constructing F90 module support for "hi_mod_funcs"...
+		Creating wrapper for Fortran function "new_norm2"("new_norm2")...
+			Constructing wrapper function "hi_mod_funcs.new_norm2"...
+			  new_norm2 = new_norm2(r)
+		Creating wrapper for Fortran function "new_norm3"("new_norm3")...
+			Constructing wrapper function "hi_mod_funcs.new_norm3"...
+			  new_norm3 = new_norm3(r)
+			Constructing wrapper function "hi_mod_funcs.gaussv"...
+			  gaussv(gp,gw,[ngaus])
+			Constructing wrapper function "hi_mod_funcs.invsolvr"...
+			  invsolvr(a,n,indic,[nrow,ncol])
+			Constructing wrapper function "hi_mod_funcs.shapef"...
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+			  ri,sp = shapef(num_dim,elem_nd_count,c,cnr_glb_mtx,q_lcl,p_glb)
+			Constructing wrapper function "hi_mod_funcs.dshape"...
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+			  dshape(ndim,node,c,ck,x,cosn,fjcb,gd)
+		Constructing F90 module support for "hi_intg"...
+		  Variables: num_node num_nrml num_dim elem_nd_count num_elem hi_beta num_intgd
+			Constructing wrapper function "hi_intg.compute_coeff_gh"...
+			  coefg,coefh = compute_coeff_gh(npw,node,npowg,xp,xip,xiq,[ndim,nbdm])
+			Constructing wrapper function "hi_intg.compute_coeff_g"...
+			  compute_coeff_g(node,xp,xip,xiq,coefg,[ndim,nbdm,npowg])
+			Constructing wrapper function "hi_intg.compute_coeff_b"...
+			  coefb = compute_coeff_b(nf,node,npowf,xp,xip,xiq,slop,rhoq,coefg,[ndim,npowg])
+			Constructing wrapper function "hi_intg.integrate_rho"...
+			  hiresult = integrate_rho(nf,src_lcl,pt_intg,coef_g,coef_h,[ndim,npw,n_pwr_g])
+			Constructing wrapper function "hi_intg.eval_singular_elem"...
+			  hiresult = eval_singular_elem(this_elem_id,nf,ndim,src_preset_flag)
+			Constructing wrapper function "hi_intg.f_integrand"...
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+			  fb = f_integrand(nf,cosn,drdx,drdn,shap,[ndim])
+			Constructing wrapper function "hi_intg.set_npwg"...
+			  set_npwg(number)
+			Constructing wrapper function "hi_intg.set_src_preset"...
+			  set_src_preset(ksi,eta,glb,ctr_glb)
+			Constructing wrapper function "hi_intg.rim_elems"...
+			  rim_elems()
+			Constructing wrapper function "hi_intg.get_node_matrix"...
+			  ex_node_matrix = get_node_matrix(nd)
+			Constructing wrapper function "hi_intg.read_model_from_dat"...
+			  read_model_from_dat()
+			Constructing wrapper function "hi_intg.read_model_from_wavdut"...
+			  read_model_from_wavdut()
+			Constructing wrapper function "hi_intg.swap_result"...
+getarrdims:warning: assumed shape array, using 0 instead of '*'
+			  swap_result(result)
+		Constructing F90 module support for "elem_intgl"...
+			Constructing wrapper function "elem_intgl.norm_ele1"...
+			  norm_ele1(ielem,xp,yp,zp,amatrix,bmatrix)
+			Constructing wrapper function "elem_intgl.sing_ele1"...
+			  sing_ele1(inode,ielem,numqua,xp,yp,zp,amatrix,bmatrix)
+			Constructing wrapper function "elem_intgl.norm_int1"...
+			  norm_int1(is,ielem,ncne,xp,yp,zp,amatrix,bmatrix)
+			Constructing wrapper function "elem_intgl.green_func"...
+			  xhf = green_func(h,pos_glb,src_glb)
+			Constructing wrapper function "elem_intgl.tgrn"...
+			  xhf = tgrn(h,pos_glb,src_glb)
+			Constructing wrapper function "elem_intgl.dtgrn"...
+			  xhf = dtgrn(h,x,x0,y,y0,z,z0)
+			Constructing wrapper function "elem_intgl.dtgrn0"...
+			  xhf = dtgrn0(h,x,x0,y,y0,z,z0)
+			Constructing wrapper function "elem_intgl.dtgrn1"...
+			  xhf = dtgrn1(h,x,x0,y,y0,z,z0)
+			Constructing wrapper function "elem_intgl.green1"...
+			  xff = green1(h,x,x0,y,y0,z,z0)
+	Wrote C/API module "test" to file "/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/testmodule.c"
+	Fortran 90 wrappers are saved to "/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90"
+  adding '/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/fortranobject.c' to sources.
+  adding '/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7' to include_dirs.
+copying /usr/local/lib/python2.7/site-packages/numpy/f2py/src/fortranobject.c -> /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7
+copying /usr/local/lib/python2.7/site-packages/numpy/f2py/src/fortranobject.h -> /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7
+  adding '/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90' to sources.
+build_src: building npy-pkg config files
+running build_ext
+customize UnixCCompiler
+customize UnixCCompiler using build_ext
+customize Gnu95FCompiler
+Found executable /usr/local/bin/gfortran
+customize Gnu95FCompiler
+customize Gnu95FCompiler using build_ext
+building 'test' extension
+compiling C sources
+C compiler: clang -fno-strict-aliasing -fno-common -dynamic -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes
+
+creating /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/var
+creating /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/var/folders
+creating /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/var/folders/zf
+creating /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn
+creating /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T
+creating /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV
+creating /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7
+compile options: '-I/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7 -I/usr/local/lib/python2.7/site-packages/numpy/core/include -I/usr/local/include -I/usr/local/opt/openssl/include -I/usr/local/opt/sqlite/include -I/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c'
+clang: /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/fortranobject.c
+In file included from /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/fortranobject.c:2:
+In file included from /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/fortranobject.h:13:
+In file included from /usr/local/lib/python2.7/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /usr/local/lib/python2.7/site-packages/numpy/core/include/numpy/ndarrayobject.h:17:
+In file included from /usr/local/lib/python2.7/site-packages/numpy/core/include/numpy/ndarraytypes.h:1804:
+/usr/local/lib/python2.7/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:15:2: warning: "Using deprecated NumPy API, disable it by "          "#defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it by " \
+ ^
+1 warning generated.
+clang: /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/testmodule.c
+In file included from /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/testmodule.c:18:
+In file included from /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/fortranobject.h:13:
+In file included from /usr/local/lib/python2.7/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /usr/local/lib/python2.7/site-packages/numpy/core/include/numpy/ndarrayobject.h:17:
+In file included from /usr/local/lib/python2.7/site-packages/numpy/core/include/numpy/ndarraytypes.h:1804:
+/usr/local/lib/python2.7/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:15:2: warning: "Using deprecated NumPy API, disable it by "          "#defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it by " \
+ ^
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/testmodule.c:7149:38: warning: incompatible pointer types assigning to 'f2py_init_func' (aka 'void (*)(int *, npy_intp *, f2py_set_data_func, int *)') from 'void (*)(int *, int *, void (*)(char *, int *), int *)' [-Wincompatible-pointer-types]
+  f2py_gen_matrix_def[i_f2py++].func = param_local;
+                                     ^ ~~~~~~~~~~~
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/testmodule.c:7153:38: warning: incompatible pointer types assigning to 'f2py_init_func' (aka 'void (*)(int *, npy_intp *, f2py_set_data_func, int *)') from 'void (*)(int *, int *, void (*)(char *, int *), int *)' [-Wincompatible-pointer-types]
+  f2py_gen_matrix_def[i_f2py++].func = bmata;
+                                     ^ ~~~~~
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/testmodule.c:7154:38: warning: incompatible pointer types assigning to 'f2py_init_func' (aka 'void (*)(int *, npy_intp *, f2py_set_data_func, int *)') from 'void (*)(int *, int *, void (*)(char *, int *), int *)' [-Wincompatible-pointer-types]
+  f2py_gen_matrix_def[i_f2py++].func = amata;
+                                     ^ ~~~~~
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/testmodule.c:7155:38: warning: incompatible pointer types assigning to 'f2py_init_func' (aka 'void (*)(int *, npy_intp *, f2py_set_data_func, int *)') from 'void (*)(int *, int *, void (*)(char *, int *), int *)' [-Wincompatible-pointer-types]
+  f2py_gen_matrix_def[i_f2py++].func = param;
+                                     ^ ~~~~~
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/testmodule.c:7214:32: warning: incompatible pointer types assigning to 'f2py_init_func' (aka 'void (*)(int *, npy_intp *, f2py_set_data_func, int *)') from 'void (*)(int *, int *, void (*)(char *, int *), int *)' [-Wincompatible-pointer-types]
+  f2py_mesh_def[i_f2py++].func = nodele;
+                               ^ ~~~~~~
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/testmodule.c:7217:32: warning: incompatible pointer types assigning to 'f2py_init_func' (aka 'void (*)(int *, npy_intp *, f2py_set_data_func, int *)') from 'void (*)(int *, int *, void (*)(char *, int *), int *)' [-Wincompatible-pointer-types]
+  f2py_mesh_def[i_f2py++].func = xyz;
+                               ^ ~~~
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/testmodule.c:7218:32: warning: incompatible pointer types assigning to 'f2py_init_func' (aka 'void (*)(int *, npy_intp *, f2py_set_data_func, int *)') from 'void (*)(int *, int *, void (*)(char *, int *), int *)' [-Wincompatible-pointer-types]
+  f2py_mesh_def[i_f2py++].func = nodelj;
+                               ^ ~~~~~~
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/testmodule.c:7221:32: warning: incompatible pointer types assigning to 'f2py_init_func' (aka 'void (*)(int *, npy_intp *, f2py_set_data_func, int *)') from 'void (*)(int *, int *, void (*)(char *, int *), int *)' [-Wincompatible-pointer-types]
+  f2py_mesh_def[i_f2py++].func = ncon;
+                               ^ ~~~~
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/testmodule.c:7222:32: warning: incompatible pointer types assigning to 'f2py_init_func' (aka 'void (*)(int *, npy_intp *, f2py_set_data_func, int *)') from 'void (*)(int *, int *, void (*)(char *, int *), int *)' [-Wincompatible-pointer-types]
+  f2py_mesh_def[i_f2py++].func = ietype;
+                               ^ ~~~~~~
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/testmodule.c:7225:32: warning: incompatible pointer types assigning to 'f2py_init_func' (aka 'void (*)(int *, npy_intp *, f2py_set_data_func, int *)') from 'void (*)(int *, int *, void (*)(char *, int *), int *)' [-Wincompatible-pointer-types]
+  f2py_mesh_def[i_f2py++].func = nodnoe;
+                               ^ ~~~~~~
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/testmodule.c:7227:32: warning: incompatible pointer types assigning to 'f2py_init_func' (aka 'void (*)(int *, npy_intp *, f2py_set_data_func, int *)') from 'void (*)(int *, int *, void (*)(char *, int *), int *)' [-Wincompatible-pointer-types]
+  f2py_mesh_def[i_f2py++].func = nodqua;
+                               ^ ~~~~~~
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/testmodule.c:7228:32: warning: incompatible pointer types assigning to 'f2py_init_func' (aka 'void (*)(int *, npy_intp *, f2py_set_data_func, int *)') from 'void (*)(int *, int *, void (*)(char *, int *), int *)' [-Wincompatible-pointer-types]
+  f2py_mesh_def[i_f2py++].func = txyze;
+                               ^ ~~~~~
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/testmodule.c:7229:32: warning: incompatible pointer types assigning to 'f2py_init_func' (aka 'void (*)(int *, npy_intp *, f2py_set_data_func, int *)') from 'void (*)(int *, int *, void (*)(char *, int *), int *)' [-Wincompatible-pointer-types]
+  f2py_mesh_def[i_f2py++].func = dxyz;
+                               ^ ~~~~
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/testmodule.c:7231:32: warning: incompatible pointer types assigning to 'f2py_init_func' (aka 'void (*)(int *, npy_intp *, f2py_set_data_func, int *)') from 'void (*)(int *, int *, void (*)(char *, int *), int *)' [-Wincompatible-pointer-types]
+  f2py_mesh_def[i_f2py++].func = dxyze;
+                               ^ ~~~~~
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/testmodule.c:7236:32: warning: incompatible pointer types assigning to 'f2py_init_func' (aka 'void (*)(int *, npy_intp *, f2py_set_data_func, int *)') from 'void (*)(int *, int *, void (*)(char *, int *), int *)' [-Wincompatible-pointer-types]
+  f2py_mesh_def[i_f2py++].func = ncn;
+                               ^ ~~~
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/testmodule.c:7237:32: warning: incompatible pointer types assigning to 'f2py_init_func' (aka 'void (*)(int *, npy_intp *, f2py_set_data_func, int *)') from 'void (*)(int *, int *, void (*)(char *, int *), int *)' [-Wincompatible-pointer-types]
+  f2py_mesh_def[i_f2py++].func = ncond;
+                               ^ ~~~~~
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/testmodule.c:7239:32: warning: incompatible pointer types assigning to 'f2py_init_func' (aka 'void (*)(int *, npy_intp *, f2py_set_data_func, int *)') from 'void (*)(int *, int *, void (*)(char *, int *), int *)' [-Wincompatible-pointer-types]
+  f2py_mesh_def[i_f2py++].func = xyze;
+                               ^ ~~~~
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/testmodule.c:7331:39: warning: incompatible pointer types assigning to 'f2py_init_func' (aka 'void (*)(int *, npy_intp *, f2py_set_data_func, int *)') from 'void (*)(int *, int *, void (*)(char *, int *), int *)' [-Wincompatible-pointer-types]
+  f2py_extend_mesh_def[i_f2py++].func = sambxy;
+                                      ^ ~~~~~~
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/testmodule.c:7334:39: warning: incompatible pointer types assigning to 'f2py_init_func' (aka 'void (*)(int *, npy_intp *, f2py_set_data_func, int *)') from 'void (*)(int *, int *, void (*)(char *, int *), int *)' [-Wincompatible-pointer-types]
+  f2py_extend_mesh_def[i_f2py++].func = samb;
+                                      ^ ~~~~
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/testmodule.c:7336:39: warning: incompatible pointer types assigning to 'f2py_init_func' (aka 'void (*)(int *, npy_intp *, f2py_set_data_func, int *)') from 'void (*)(int *, int *, void (*)(char *, int *), int *)' [-Wincompatible-pointer-types]
+  f2py_extend_mesh_def[i_f2py++].func = dsamb;
+                                      ^ ~~~~~
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/testmodule.c:111:12: warning: unused function 'f2py_size' [-Wunused-function]
+static int f2py_size(PyArrayObject* var, ...)
+           ^
+22 warnings generated.
+compiling Fortran 90 module sources
+Fortran f77 compiler: /usr/local/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -fPIC -O3 -funroll-loops
+Fortran f90 compiler: /usr/local/bin/gfortran -Wall -g -fno-second-underscore -fPIC -O3 -funroll-loops
+Fortran fix compiler: /usr/local/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -Wall -g -fno-second-underscore -fPIC -O3 -funroll-loops
+creating /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/elem_proc
+creating /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/hi_intgl
+compile options: '-I/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7 -I/usr/local/lib/python2.7/site-packages/numpy/core/include -I/usr/local/include -I/usr/local/opt/openssl/include -I/usr/local/opt/sqlite/include -I/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c'
+extra options: '-J/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/ -I/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/'
+gfortran:f90: gen_matrix.f90
+./mfunc/solid.f90:195:3:
+
+ 116    FORMAT(' Z=',8E13.5)
+   1
+Warning: Label 116 at (1) defined but not used
+./mfunc/solid.f90:194:3:
+
+ 114    FORMAT(' Y=',8E13.5)
+   1
+Warning: Label 114 at (1) defined but not used
+./mfunc/solid.f90:193:3:
+
+ 112    FORMAT(' X=',8E13.5)
+   1
+Warning: Label 112 at (1) defined but not used
+gen_matrix.f90:96:60:
+
+     subroutine intg_branch(flag,ielem,inode,xp,yp,zp,amatrix,bmatrix,ii) 
+                                                            1
+Warning: Dummy argument 'amatrix' at (1) was declared INTENT(OUT) but was not set [-Wunused-dummy-argument]
+gen_matrix.f90:96:68:
+
+     subroutine intg_branch(flag,ielem,inode,xp,yp,zp,amatrix,bmatrix,ii) 
+                                                                    1
+Warning: Dummy argument 'bmatrix' at (1) was declared INTENT(OUT) but was not set [-Wunused-dummy-argument]
+gen_matrix.f90:96:37:
+
+     subroutine intg_branch(flag,ielem,inode,xp,yp,zp,amatrix,bmatrix,ii) 
+                                     1
+Warning: Unused dummy argument 'ielem' at (1) [-Wunused-dummy-argument]
+gen_matrix.f90:96:43:
+
+     subroutine intg_branch(flag,ielem,inode,xp,yp,zp,amatrix,bmatrix,ii) 
+                                           1
+Warning: Unused dummy argument 'inode' at (1) [-Wunused-dummy-argument]
+gen_matrix.f90:96:46:
+
+     subroutine intg_branch(flag,ielem,inode,xp,yp,zp,amatrix,bmatrix,ii) 
+                                              1
+Warning: Unused dummy argument 'xp' at (1) [-Wunused-dummy-argument]
+gen_matrix.f90:96:49:
+
+     subroutine intg_branch(flag,ielem,inode,xp,yp,zp,amatrix,bmatrix,ii) 
+                                                 1
+Warning: Unused dummy argument 'yp' at (1) [-Wunused-dummy-argument]
+gen_matrix.f90:96:52:
+
+     subroutine intg_branch(flag,ielem,inode,xp,yp,zp,amatrix,bmatrix,ii) 
+                                                    1
+Warning: Unused dummy argument 'zp' at (1) [-Wunused-dummy-argument]
+gen_matrix.f90:27:35:
+
+         integer :: inode,ii,ielem,i
+                                   1
+Warning: Unused variable 'i' declared at (1) [-Wunused-variable]
+./mfunc/solid.f90:579:30:
+
+       INTEGER  MCELE,MCNT(100),MNOD(100)
+                              1
+Warning: Unused variable 'mcnt' declared at (1) [-Wunused-variable]
+./mfunc/solid.f90:579:40:
+
+       INTEGER  MCELE,MCNT(100),MNOD(100)
+                                        1
+Warning: Unused variable 'mnod' declared at (1) [-Wunused-variable]
+./mfunc/solid.f90:457:31:
+
+       INTEGER  I,J,K,N,NA,NAXIS
+                               1
+Warning: Unused variable 'naxis' declared at (1) [-Wunused-variable]
+./mfunc/solid.f90:20:24:
+
+       INTEGER  IELEM,I,J,LK,LJ,LI,IEL,MINSIDE
+                        1
+Warning: Unused variable 'j' declared at (1) [-Wunused-variable]
+gfortran:f90: mesh.f90
+mesh.f90:321:4:
+
+ 1100    FORMAT(8E15.6)
+    1
+Warning: Label 1100 at (1) defined but not used
+mesh.f90:484:4:
+
+ 1000   FORMAT(1X,8I6)
+    1
+Warning: Label 1000 at (1) defined but not used
+mesh.f90:214:38:
+
+         INTEGER I,IE,M,INODE,NCNN,K,KK
+                                      1
+Warning: Unused variable 'kk' declared at (1) [-Wunused-variable]
+mesh.f90:49:18:
+
+         REAL*8  WL
+                  1
+Warning: Unused variable 'wl' declared at (1) [-Wunused-variable]
+gfortran:f90: mod_func.f90
+mod_func.f90:3:1:
+
+  implicit none
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:4:1:
+
+  real(8) :: timerk,W1,rampf
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:5:1:
+
+  real(8),parameter :: g = 9.18
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:13:1:
+
+    REAL(8),INTENT(IN):: X,Y
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:17:1:
+
+     ETI=RAMPF*ETI
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:27:1:
+
+    REAL*8,INTENT(IN):: X,Y,Z
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:29:1:
+
+    REAL*8  WKX,DUM
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:70:1:
+
+    REAL*8,INTENT(IN):: X,Y,Z
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:72:1:
+
+    REAL*8  WKX,DUM
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:100:1:
+
+    IMPLICIT    NONE
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:102:1:
+
+    REAL*8,INTENT(IN)::   X,Y,Z
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:105:1:
+
+    REAL*8 DUM,WKX
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:110:1:
+
+   IF (H.GT.0.0d0) THEN           
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:155:1:
+
+    IMPLICIT    NONE
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:157:1:
+
+    INTEGER KIND
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:158:1:
+
+    REAL*8,INTENT(IN)::   X,Y,Z
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:162:1:
+
+   IF (KIND==0) THEN
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:163:1:
+
+     PHI=1.0d0           
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:168:1:
+
+     PHI=X       
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:173:1:
+
+     PHI=Y           
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:178:1:
+
+     PHI=Z           
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:196:7:
+
+        IMPLICIT  NONE
+       1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:198:1:
+
+    REAL*8,INTENT(IN) :: SI,ETA
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:199:1:
+
+    REAL*8,INTENT(OUT):: SF(8),DSF(2,8)
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:223:1:
+
+  RETURN
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:224:1:
+
+  END SUBROUTINE SPFUNC6
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:239:1:
+
+    REAL*8,INTENT(IN) :: SI,ETA
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:240:1:
+
+    REAL*8,INTENT(OUT):: SF(8),DSF(2,8)
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:252:38:
+
+         DSF(1,2)=-SI*(1.0D0-ETA)      
+                                      1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:269:1:
+
+  RETURN
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:270:1:
+
+  END SUBROUTINE SPFUNC8
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:282:7:
+
+        IMPLICIT  NONE
+       1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:284:1:
+
+    REAL*8,INTENT(IN) :: SI,ETA
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:285:1:
+
+    REAL*8,INTENT(OUT):: SF(8),DSF(2,8),DDSF(3,8)
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:311:30:
+
+         DDSF(1,2)= 4.0D0      
+                              1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:325:28:
+
+         DDSF(3,2)= 0.0D0    
+                            1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:331:1:
+
+    RETURN
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:332:1:
+
+   END SUBROUTINE SPFUNC6_1
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:354:38:
+
+         DSF(1,2)=-SI*(1.0D0-ETA)      
+                                      1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:373:36:
+
+         DDSF(1,2)=-(1.0D0-ETA)      
+                                    1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:391:27:
+
+         DDSF(3,2)= SI      
+                           1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+mod_func.f90:400:1:
+
+    END SUBROUTINE SPFUNC8_1
+ 1
+Warning: Nonconforming tab character at (1) [-Wtabs]
+gfortran:f90: ./elem_proc/tripole_mod.f90
+gfortran:f90: ./elem_proc/extend_mesh.f90
+./elem_proc/extend_mesh.f90:217:3:
+
+ 220   CONTINUE
+   1
+Warning: Label 220 at (1) defined but not used
+gfortran:f90: ./hi_intgl/hi_funcs.f90
+gfortran:f90: ./hi_intgl/hi_integral.f90
+./add_on/hi_const.f90:5:43: Warning: Unused PRIVATE module variable 'dlt' declared at (1) [-Wunused-value]
+./hi_intgl/hi_integral.f90:125:37:
+
+         integer :: i,j,ie,id,tmp,tmp1
+                                     1
+Warning: Unused variable 'tmp1' declared at (1) [-Wunused-variable]
+./add_on/run_thru_elems.f90:31:25: Warning: Unused variable 'id' declared at (1) [-Wunused-variable]
+./add_on/hi_integrand.f90:21:26: Warning: Unused variable 'x' declared at (1) [-Wunused-variable]
+./add_on/test.f90:24:34: Warning: Unused variable 'comt' declared at (1) [-Wunused-variable]
+./add_on/test.f90:20:24: Warning: Unused variable 'ie' declared at (1) [-Wunused-variable]
+./add_on/test2.f90:14:27: Warning: Unused variable 'beta1' declared at (1) [-Wunused-variable]
+./add_on/test2.f90:11:30: Warning: Unused variable 'cosn' declared at (1) [-Wunused-variable]
+./add_on/test2.f90:11:56: Warning: Unused variable 'gcd' declared at (1) [-Wunused-variable]
+./add_on/test2.f90:14:32: Warning: Unused variable 'nbdm' declared at (1) [-Wunused-variable]
+./add_on/test2.f90:16:50: Warning: Unused variable 'nbeta' declared at (1) [-Wunused-variable]
+./add_on/test2.f90:11:39: Warning: Unused variable 'ri' declared at (1) [-Wunused-variable]
+./add_on/test3.f90:25:25: Warning: Unused variable 'r2' declared at (1) [-Wunused-variable]
+./add_on/test3.f90:2:37: Warning: Unused dummy argument 'xiq' at (1) [-Wunused-dummy-argument]
+./add_on/test6.f90:54:23: Warning: Unused variable 'drdn' declared at (1) [-Wunused-variable]
+./add_on/test6.f90:54:50: Warning: Unused variable 'r2' declared at (1) [-Wunused-variable]
+./add_on/test6.f90:54:29: Warning: Unused variable 'xbar2' declared at (1) [-Wunused-variable]
+./add_on/test6.f90:54:35: Warning: Unused variable 'xxbar' declared at (1) [-Wunused-variable]
+./add_on/test6.f90:12:28: Warning: Unused variable 'cosn' declared at (1) [-Wunused-variable]
+./add_on/test6.f90:10:23: Warning: Unused variable 'drdn' declared at (1) [-Wunused-variable]
+./add_on/test6.f90:12:43: Warning: Unused variable 'gcd' declared at (1) [-Wunused-variable]
+./add_on/test6.f90:15:25: Warning: Unused variable 'ip' declared at (1) [-Wunused-variable]
+./add_on/test6.f90:15:28: Warning: Unused variable 'jp' declared at (1) [-Wunused-variable]
+./add_on/test6.f90:12:61: Warning: Unused variable 'ri' declared at (1) [-Wunused-variable]
+./add_on/test6.f90:12:72: Warning: Unused variable 'shap' declared at (1) [-Wunused-variable]
+./add_on/test6.f90:12:52: Warning: Unused variable 'xi' declared at (1) [-Wunused-variable]
+gfortran:f90: ./elem_proc/ElemIntgl0.f90
+./elem_proc/ElemIntgl0.f90:204:3:
+
+ 201   FORMAT(' In SING_INT0    XP, YP, ZP=',3F12.4)
+   1
+Warning: Label 201 at (1) defined but not used
+./add_on/tgreen.f90:44:3: Warning: Label 120 at (1) defined but not used
+./elem_proc/ElemIntgl0.f90:187:30:
+
+        INTEGER IS,IELEM,N,J,IP       
+                              1
+Warning: Unused variable 'ip' declared at (1) [-Wunused-variable]
+./elem_proc/ElemIntgl0.f90:190:17:
+
+        REAL*8  NX,NY,NZ,DGN
+                 1
+Warning: Unused variable 'nx' declared at (1) [-Wunused-variable]
+./elem_proc/ElemIntgl0.f90:190:20:
+
+        REAL*8  NX,NY,NZ,DGN
+                    1
+Warning: Unused variable 'ny' declared at (1) [-Wunused-variable]
+./elem_proc/ElemIntgl0.f90:190:23:
+
+        REAL*8  NX,NY,NZ,DGN
+                       1
+Warning: Unused variable 'nz' declared at (1) [-Wunused-variable]
+./elem_proc/ElemIntgl0.f90:189:16:
+
+        REAL*8  X,Y,Z,X0,Y0,Z0      
+                1
+Warning: Unused variable 'x' declared at (1) [-Wunused-variable]
+./elem_proc/ElemIntgl0.f90:189:23:
+
+        REAL*8  X,Y,Z,X0,Y0,Z0      
+                       1
+Warning: Unused variable 'x0' declared at (1) [-Wunused-variable]
+./elem_proc/ElemIntgl0.f90:189:18:
+
+        REAL*8  X,Y,Z,X0,Y0,Z0      
+                  1
+Warning: Unused variable 'y' declared at (1) [-Wunused-variable]
+./elem_proc/ElemIntgl0.f90:189:26:
+
+        REAL*8  X,Y,Z,X0,Y0,Z0      
+                          1
+Warning: Unused variable 'y0' declared at (1) [-Wunused-variable]
+./elem_proc/ElemIntgl0.f90:189:20:
+
+        REAL*8  X,Y,Z,X0,Y0,Z0      
+                    1
+Warning: Unused variable 'z' declared at (1) [-Wunused-variable]
+./elem_proc/ElemIntgl0.f90:189:29:
+
+        REAL*8  X,Y,Z,X0,Y0,Z0      
+                             1
+Warning: Unused variable 'z0' declared at (1) [-Wunused-variable]
+./elem_proc/ElemIntgl0.f90:125:40:
+
+       INTEGER IS,IELEM,N,NSAMB,NCNE,J,IP
+                                        1
+Warning: Unused variable 'ip' declared at (1) [-Wunused-variable]
+./elem_proc/ElemIntgl0.f90:127:15:
+
+       REAL*8  X,Y,Z,X0,Y0,Z0   
+               1
+Warning: Unused variable 'x' declared at (1) [-Wunused-variable]
+./elem_proc/ElemIntgl0.f90:127:22:
+
+       REAL*8  X,Y,Z,X0,Y0,Z0   
+                      1
+Warning: Unused variable 'x0' declared at (1) [-Wunused-variable]
+./elem_proc/ElemIntgl0.f90:127:17:
+
+       REAL*8  X,Y,Z,X0,Y0,Z0   
+                 1
+Warning: Unused variable 'y' declared at (1) [-Wunused-variable]
+./elem_proc/ElemIntgl0.f90:127:25:
+
+       REAL*8  X,Y,Z,X0,Y0,Z0   
+                         1
+Warning: Unused variable 'y0' declared at (1) [-Wunused-variable]
+./elem_proc/ElemIntgl0.f90:127:19:
+
+       REAL*8  X,Y,Z,X0,Y0,Z0   
+                   1
+Warning: Unused variable 'z' declared at (1) [-Wunused-variable]
+./elem_proc/ElemIntgl0.f90:127:28:
+
+       REAL*8  X,Y,Z,X0,Y0,Z0   
+                            1
+Warning: Unused variable 'z0' declared at (1) [-Wunused-variable]
+./elem_proc/ElemIntgl0.f90:52:17:
+
+       INTEGER I,J,IS,IELEM,INODE,NODNUM,ND,NP,NUMQUA
+                 1
+Warning: Unused variable 'j' declared at (1) [-Wunused-variable]
+./elem_proc/ElemIntgl0.f90:52:42:
+
+       INTEGER I,J,IS,IELEM,INODE,NODNUM,ND,NP,NUMQUA
+                                          1
+Warning: Unused variable 'nd' declared at (1) [-Wunused-variable]
+./elem_proc/ElemIntgl0.f90:52:45:
+
+       INTEGER I,J,IS,IELEM,INODE,NODNUM,ND,NP,NUMQUA
+                                             1
+Warning: Unused variable 'np' declared at (1) [-Wunused-variable]
+./elem_proc/ElemIntgl0.f90:22:24:
+
+         INTEGER  IS,ND,J,NP,IELEM,NCNE
+                        1
+Warning: Unused variable 'j' declared at (1) [-Wunused-variable]
+./elem_proc/ElemIntgl0.f90:22:22:
+
+         INTEGER  IS,ND,J,NP,IELEM,NCNE
+                      1
+Warning: Unused variable 'nd' declared at (1) [-Wunused-variable]
+./elem_proc/ElemIntgl0.f90:22:27:
+
+         INTEGER  IS,ND,J,NP,IELEM,NCNE
+                           1
+Warning: Unused variable 'np' declared at (1) [-Wunused-variable]
+./add_on/tgreen.f90:251:23: Warning: Unused variable 'dz' declared at (1) [-Wunused-variable]
+./add_on/tgreen.f90:252:24: Warning: Unused variable 'dz02' declared at (1) [-Wunused-variable]
+./add_on/tgreen.f90:252:40: Warning: Unused variable 'sr' declared at (1) [-Wunused-variable]
+./add_on/tgreen.f90:252:33: Warning: Unused variable 'sr2' declared at (1) [-Wunused-variable]
+./add_on/tgreen.f90:252:44: Warning: Unused variable 'sr3' declared at (1) [-Wunused-variable]
+./add_on/tgreen.f90:252:48: Warning: Unused variable 'sr5' declared at (1) [-Wunused-variable]
+./add_on/tgreen.f90:195:27: Warning: Unused dummy argument 'h' at (1) [-Wunused-dummy-argument]
+./add_on/tgreen.f90:57:17: Warning: Unused variable 'dx' declared at (1) [-Wunused-variable]
+./add_on/tgreen.f90:57:20: Warning: Unused variable 'dy' declared at (1) [-Wunused-variable]
+./add_on/tgreen.f90:57:23: Warning: Unused variable 'dz' declared at (1) [-Wunused-variable]
+./add_on/tgreen.f90:57:27: Warning: Unused variable 'dz1' declared at (1) [-Wunused-variable]
+./add_on/tgreen.f90:9:21: Warning: Unused variable 'dx' declared at (1) [-Wunused-variable]
+./add_on/tgreen.f90:9:24: Warning: Unused variable 'dy' declared at (1) [-Wunused-variable]
+./add_on/tgreen.f90:9:27: Warning: Unused variable 'dz' declared at (1) [-Wunused-variable]
+./add_on/tgreen.f90:9:31: Warning: Unused variable 'dz1' declared at (1) [-Wunused-variable]
+./add_on/tgreen.f90:5:17: Warning: Unused variable 'i' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:200:27: Warning: Unused variable 'csst' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:195:29: Warning: Unused variable 'debug_flag' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:184:35: Warning: Unused variable 'dgn0' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:184:40: Warning: Unused variable 'dgn1' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:184:16: Warning: Unused variable 'dpox' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:184:21: Warning: Unused variable 'dpoy' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:184:26: Warning: Unused variable 'dpoz' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:200:39: Warning: Unused variable 'dsf' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:182:27: Warning: Unused variable 'dum' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:181:29: Warning: Unused variable 'dx' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:181:32: Warning: Unused variable 'dy' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:181:35: Warning: Unused variable 'dz' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:199:33: Warning: Unused variable 'etat' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:201:36: Warning: Unused variable 'f' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:201:31: Warning: Unused variable 'f1' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:201:34: Warning: Unused variable 'f2' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:201:50: Warning: Unused variable 'gxf0' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:201:55: Warning: Unused variable 'gxf1' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:169:25: Warning: Unused variable 'i' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:168:18: Warning: Unused variable 'ip' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:200:54: Warning: Unused variable 'jk0' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:201:23: Warning: Unused variable 'jk1c' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:201:28: Warning: Unused variable 'jk1s' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:168:13: Warning: Unused variable 'n' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:200:42: Warning: Unused variable 'n0' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:200:46: Warning: Unused variable 'n1c' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:200:50: Warning: Unused variable 'n1s' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:182:35: Warning: Unused variable 'phi' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:200:22: Warning: Unused variable 'plo' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:181:37: Warning: Unused variable 'r' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:200:35: Warning: Unused variable 'sf' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:200:32: Warning: Unused variable 'snst' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:201:40: Warning: Unused variable 'tot' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:201:45: Warning: Unused variable 'totj' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:199:40: Warning: Unused variable 'wit' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:182:31: Warning: Unused variable 'wkx' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:199:25: Warning: Unused variable 'xit' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:185:47: Warning: Unused variable 'xitet' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:185:38: Warning: Unused variable 'xitsi' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:188:19: Warning: Unused variable 'xj' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:188:29: Warning: Unused variable 'xjsm' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:182:15: Warning: Unused variable 'xsb' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:188:38: Warning: Unused variable 'xxj' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:182:19: Warning: Unused variable 'ysb' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:182:23: Warning: Unused variable 'zsb' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:111:19: Warning: Unused variable 'dum' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:107:42: Warning: Unused variable 'ip' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:111:27: Warning: Unused variable 'phi' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:111:23: Warning: Unused variable 'wkx' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:47:45: Warning: Unused variable 'dxyzt' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:46:17: Warning: Unused variable 'j' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:46:42: Warning: Unused variable 'nd' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:46:45: Warning: Unused variable 'np' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:46:51: Warning: Unused variable 'nsamb' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:47:34: Warning: Unused variable 'xyzt' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:16:21: Warning: Unused variable 'ip' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:16:28: Warning: Unused variable 'j' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:16:23: Warning: Unused variable 'n' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:16:26: Warning: Unused variable 'nd' declared at (1) [-Wunused-variable]
+./add_on/ElemIntgl1.f90:16:31: Warning: Unused variable 'np' declared at (1) [-Wunused-variable]
+./elem_proc/ElemIntgl0.f90:191:0:
+
+        REAL*8  AVAL(4,8),BVAL(4,8),GXF(4)
+ ^
+Warning: 'gxf[1]' may be used uninitialized in this function [-Wmaybe-uninitialized]
+./elem_proc/ElemIntgl0.f90:191:0: Warning: 'gxf[2]' may be used uninitialized in this function [-Wmaybe-uninitialized]
+./elem_proc/ElemIntgl0.f90:191:0: Warning: 'gxf[3]' may be used uninitialized in this function [-Wmaybe-uninitialized]
+./elem_proc/ElemIntgl0.f90:191:0: Warning: 'gxf[0]' may be used uninitialized in this function [-Wmaybe-uninitialized]
+./add_on/tgreen.f90:364:0: Warning: 'dx' may be used uninitialized in this function [-Wmaybe-uninitialized]
+./add_on/tgreen.f90:365:0: Warning: 'dy' may be used uninitialized in this function [-Wmaybe-uninitialized]
+./add_on/ElemIntgl1.f90:46:0: Warning: 'nodnum' may be used uninitialized in this function [-Wmaybe-uninitialized]
+compiling Fortran sources
+Fortran f77 compiler: /usr/local/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -fPIC -O3 -funroll-loops
+Fortran f90 compiler: /usr/local/bin/gfortran -Wall -g -fno-second-underscore -fPIC -O3 -funroll-loops
+Fortran fix compiler: /usr/local/bin/gfortran -Wall -g -ffixed-form -fno-second-underscore -Wall -g -fno-second-underscore -fPIC -O3 -funroll-loops
+compile options: '-I/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7 -I/usr/local/lib/python2.7/site-packages/numpy/core/include -I/usr/local/include -I/usr/local/opt/openssl/include -I/usr/local/opt/sqlite/include -I/usr/local/Cellar/python/2.7.10_2/Frameworks/Python.framework/Versions/2.7/include/python2.7 -c'
+extra options: '-J/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/ -I/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/'
+gfortran:f90: /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:12:19:
+
+       integer r,i,j
+                   1
+Warning: Unused variable 'j' declared at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:42:19:
+
+       integer r,i,j
+                   1
+Warning: Unused variable 'j' declared at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:72:19:
+
+       integer r,i,j
+                   1
+Warning: Unused variable 'j' declared at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:102:19:
+
+       integer r,i,j
+                   1
+Warning: Unused variable 'j' declared at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:128:10:
+
+       use gen_matrix, only : param_local
+          1
+Warning: Unused module variable 'amata' which has been explicitly imported at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:128:10: Warning: Unused module variable 'bmata' which has been explicitly imported at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:128:10: Warning: Unused module variable 'param' which has been explicitly imported at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:128:10: Warning: Unused module variable 'param_local' which has been explicitly imported at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:166:19:
+
+       integer r,i,j
+                   1
+Warning: Unused variable 'j' declared at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:196:19:
+
+       integer r,i,j
+                   1
+Warning: Unused variable 'j' declared at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:226:19:
+
+       integer r,i,j
+                   1
+Warning: Unused variable 'j' declared at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:256:19:
+
+       integer r,i,j
+                   1
+Warning: Unused variable 'j' declared at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:286:19:
+
+       integer r,i,j
+                   1
+Warning: Unused variable 'j' declared at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:316:19:
+
+       integer r,i,j
+                   1
+Warning: Unused variable 'j' declared at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:346:19:
+
+       integer r,i,j
+                   1
+Warning: Unused variable 'j' declared at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:376:19:
+
+       integer r,i,j
+                   1
+Warning: Unused variable 'j' declared at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:406:19:
+
+       integer r,i,j
+                   1
+Warning: Unused variable 'j' declared at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:436:19:
+
+       integer r,i,j
+                   1
+Warning: Unused variable 'j' declared at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:466:19:
+
+       integer r,i,j
+                   1
+Warning: Unused variable 'j' declared at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:496:19:
+
+       integer r,i,j
+                   1
+Warning: Unused variable 'j' declared at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:526:19:
+
+       integer r,i,j
+                   1
+Warning: Unused variable 'j' declared at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:552:10:
+
+       use mesh, only : nodele
+          1
+Warning: Unused module variable 'dxyz' which has been explicitly imported at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:552:10: Warning: Unused module variable 'dxyze' which has been explicitly imported at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:552:10: Warning: Unused module variable 'ietype' which has been explicitly imported at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:552:10: Warning: Unused module variable 'ncn' which has been explicitly imported at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:552:10: Warning: Unused module variable 'ncon' which has been explicitly imported at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:552:10: Warning: Unused module variable 'ncond' which has been explicitly imported at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:552:10: Warning: Unused module variable 'nodele' which has been explicitly imported at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:552:10: Warning: Unused module variable 'nodelj' which has been explicitly imported at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:552:10: Warning: Unused module variable 'nodnoe' which has been explicitly imported at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:552:10: Warning: Unused module variable 'nodqua' which has been explicitly imported at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:552:10: Warning: Unused module variable 'txyze' which has been explicitly imported at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:552:10: Warning: Unused module variable 'xyz' which has been explicitly imported at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:552:10: Warning: Unused module variable 'xyze' which has been explicitly imported at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:687:19:
+
+       integer r,i,j
+                   1
+Warning: Unused variable 'j' declared at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:717:19:
+
+       integer r,i,j
+                   1
+Warning: Unused variable 'j' declared at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:747:19:
+
+       integer r,i,j
+                   1
+Warning: Unused variable 'j' declared at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:773:10:
+
+       use extend_mesh, only : sambxy
+          1
+Warning: Unused module variable 'dsamb' which has been explicitly imported at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:773:10: Warning: Unused module variable 'samb' which has been explicitly imported at (1) [-Wunused-variable]
+/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.f90:773:10: Warning: Unused module variable 'sambxy' which has been explicitly imported at (1) [-Wunused-variable]
+/usr/local/bin/gfortran -Wall -g -Wall -g -undefined dynamic_lookup -bundle /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/testmodule.o /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/fortranobject.o /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/gen_matrix.o /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/mesh.o /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/mod_func.o /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/elem_proc/tripole_mod.o /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/elem_proc/extend_mesh.o /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/hi_intgl/hi_funcs.o /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/hi_intgl/hi_integral.o /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/elem_proc/ElemIntgl0.o /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV/src.macosx-10.10-x86_64-2.7/test-f2pywrappers2.o -L/usr/local/Cellar/gcc/5.2.0/lib/gcc/5/gcc/x86_64-apple-darwin14.4.0/5.2.0 -L/usr/local/lib -L/usr/local/opt/openssl/lib -L/usr/local/opt/sqlite/lib -lgfortran -o ./test.so
+Removing build directory /var/folders/zf/p7zt21gx1xx2f2cr38fv83sh0000gn/T/tmpamGiRV

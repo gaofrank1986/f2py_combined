@@ -110,12 +110,10 @@
         REAL*8  NX,NY,NZ,DGN
         REAL*8  DUM,WKX,PHi
         REAL*8  BMATRIX(4,8),AMATRIX(4,8),GXF(4)
-!   
+   
         DATA EX/  1.0d0,  1.0d0, -1.0d0, -1.0d0/                                                  
         DATA EY/  1.0d0, -1.0d0, -1.0d0,  1.0d0/
-!
-!    PRINT *,' IN  NSWP0'
-!
+
         NSAMB=16
         IF(NCNE.EQ.6)   NSAMB=4
 
@@ -131,7 +129,7 @@
          Z =SAMBXY(IELEM,N,3)
        
         CALL DTGRN(H,X,X0,Y,Y0,Z,Z0,GXF) 
-!                      
+                      
           NX=EX(IS)*DSAMB(IELEM,N,1)
           NY=EY(IS)*DSAMB(IELEM,N,2)
           NZ=          DSAMB(IELEM,N,3)
@@ -310,11 +308,11 @@
         ctr_glb(1) = 0
         ctr_glb(2) = 0
         ctr_glb(3) = 0
-        write(110, *)  '  src_ctr_glb    ctr_glb=',ctr_glb
+        !write(110, *)  '  src_ctr_glb    ctr_glb=',ctr_glb
 
-        print *,"start of eval singular elem"
+        !print *,"start of eval singular elem"
         pwr_g = NCN(IELEM)/2+(NCN(IELEM)/9)*2 
-        write(110, *)  ' pwr_g is set to',pwr_g
+        !write(110, *)  ' pwr_g is set to',pwr_g
 
         call set_npwg(pwr_g)
         call set_src_preset(si,eta,XYZ(1:3,NCON(IELEM,NODJ)),ctr_glb)
@@ -329,9 +327,7 @@
         call eval_singular_elem(IELEM,8,3,result0,1)!!GREEN FUNC 
         !subroutine eval_singular_elem(this_elem_id,num_edge,result,src_preset_flag)
 
-        print *,"end of eval singular elem"
-        write (12,*) ielem,NODj,is,result0
-!         write (12,*) result0
+        !print *,"end of eval singular elem"
 
 
         NSAMB=0

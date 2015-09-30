@@ -35,7 +35,7 @@
         allocate(gpl(iabs(ngl)),gwl(iabs(ngl)))
 
         num_edge = 2 * (num_dim - 1 ) ! 4 -----how many edges
-        print *,"============in eval_SINGULAR_ELEM=============="
+        !print *,"============in eval_SINGULAR_ELEM=============="
 
         hiresult = 0.
         ! cnr_glb_mtx is allocated when read in
@@ -83,7 +83,7 @@
 
                 KS=KSB(i_edge)
                 IF(DABS(src_lcl(IABS(KS))-DBLE(KS)/DABS(DBLE(KS))).LT.TOL) then
-                    print *,"Current edge iteration skipped! elem_id = ",this_elem_id," edge =",i_edge
+                    !print *,"Current edge iteration skipped! elem_id = ",this_elem_id," edge =",i_edge
                     !------------------------------------------
                     goto 100
                 end if
