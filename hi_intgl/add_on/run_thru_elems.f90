@@ -17,9 +17,9 @@
         src_lcl_preset(2) = eta
         src_glb_preset = glb
         src_ctr_glb = ctr_glb
-        print *,"src preseted as",src_lcl_preset
-        print *,"src preseted as",src_glb_preset
-        print *,"src_ctr_glb preseted as",src_ctr_glb
+        !print *,"src preseted as",src_lcl_preset
+        !print *,"src preseted as",src_glb_preset
+        !print *,"src_ctr_glb preseted as",src_ctr_glb
 
     end subroutine
 
