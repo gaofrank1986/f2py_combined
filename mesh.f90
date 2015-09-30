@@ -2,16 +2,16 @@ module mesh
     
     implicit none
     
-    real(8),allocatable :: XYZB(:,:),DXYZB(:,:)
+    real(8),private,allocatable :: XYZB(:,:),DXYZB(:,:)
     !xyzb => (3,node_id)  node data 
     !dxyzb => (3,nrml_id) derivative data
-    integer,allocatable :: NCONB(:,:),NCONDB(:,:)   
+    integer,private,allocatable :: NCONB(:,:),NCONDB(:,:)   
     ! nconb => node list body mesh
     ! ncondb => normal list body
     real(8),allocatable :: XYZE(:,:,:),DXYZE(:,:,:),TXYZE(:,:,:)
     ! xyze =>  before combine, new full mesh for node (3,8,elem_id)
     ! dxyze => before combine, new full mesh for normal (3,8,elem,id)
-    real(8),allocatable :: XYZTP(:,:),DXYZTP(:,:)
+    real(8),private,allocatable :: XYZTP(:,:),DXYZTP(:,:)
     ! xyztp => convsb, combined node mesh, xyztp(3,node_id)
     ! dxyztp = > combined normal mesh, dxyztp(3,nrml_id)
     integer,allocatable :: NCN(:),NCON(:,:),NCOND(:,:),IETYPE(:)
@@ -20,7 +20,7 @@ module mesh
     ! ncond => combined nrml list,ncond(8,elem_id)
     ! ietype => flag show if a elem is free surface mesh or a body mesh
 
-    integer,allocatable :: NNORMN(:)
+    integer,private,allocatable :: NNORMN(:)
     real(8),allocatable :: xyz(:,:),dxyz(:,:)
     integer :: nsys,nelem,nnode,nnoded,isys
     ! nsys => about symmetr
@@ -98,6 +98,8 @@ contains
 
         call convsb()
         call prepare_mesh()
+
+        deallocate(xyzb,dxyzb,nconb,ncondb,nnormn,xyztp,dxyztp)
 
     end subroutine
 
