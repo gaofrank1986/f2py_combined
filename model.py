@@ -1,9 +1,6 @@
 import numpy as np
-import te
+from test import *
 
-te.mesh.read_mesh()
-te.mesh.convsb()
-te.mesh.prepare_mesh()
-te.gen_matrix.calc_matrix()
-
-print te.gen_matrix.amata.diagonal()
+mesh.read_mesh()
+extend_mesh.declare_var()
+extend_mesh.comp_gaussian_info()

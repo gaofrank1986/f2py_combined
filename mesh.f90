@@ -120,7 +120,7 @@ contains
             dxyz(1:3,ind) = dxyztp(1:3,ind)
         end do
         
-        deallocate(xyztp,dxyztp)
+        !deallocate(xyztp,dxyztp)
 
         !==============================================
         allocate(nodele(nnode,64),nodnoe(nnode),nodelj(nnode,64)&
