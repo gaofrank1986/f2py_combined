@@ -7,7 +7,7 @@ module extend_mesh
     real(8),allocatable:: SAMB(:,:,:),SAMBXY(:,:,:),DSAMB(:,:,:)
 contains
     subroutine declare_var()
-        allocate((samb(nelem,16,0:8),sambxy(nelem,16,3),dsamb(nelem,16,6))
+        allocate(samb(nelem,16,0:8),sambxy(nelem,16,3),dsamb(nelem,16,6))
     end subroutine
     subroutine set_xyzc(a,b,c)
     real(8),intent(in) :: a,b,c
