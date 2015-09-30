@@ -2,6 +2,7 @@
 module gen_matrix
     
     use mesh!mesh data
+    use wave 
     use mod_func!supplement funcs
     !use matrix_funcs
     implicit none

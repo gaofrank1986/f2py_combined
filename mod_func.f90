@@ -1,90 +1,89 @@
 module mod_func
 
 	implicit none
-	real(8) :: timerk,W1,rampf
-	real(8),parameter :: g = 9.18
+	real(8) :: rampf
+	real(8),parameter :: g = 9.87
 
 contains
 
-        FUNCTION ETI(X,Y)
-        USE mesh
-        IMPLICIT  NONE
-!
-	  REAL(8),INTENT(IN):: X,Y
-        Real(8) :: ETI
-!
-         ETI=Amp*DCos(WK*(X*DCOS(BETA)+Y*DSIN(BETA)) -W1*TimeRK)
-	   ETI=RAMPF*ETI
+    function eti(x,y)
 
-        END FUNCTION ETI
+        use wave
+        implicit  none
+ 
+        real(8),intent(in):: x,y
+        real(8) :: eti
+
+        eti=amp*dcos(wk*(x*dcos(beta)+y*dsin(beta)) -w1*timerk)
+        eti=rampf*eti
+
+    end function eti
 
 
- FUNCTION POXY(X,Y,Z)
-        USE mesh
+     function poxy(x,y,z)
+        use wave
+
+        implicit  none
         
-        IMPLICIT  NONE
-!
-	  REAL*8,INTENT(IN):: X,Y,Z
-        Real*8  POXY
-	  REAL*8  WKX,DUM
+        real*8,intent(in):: x,y,z
+        real*8  poxy
+        real*8  wkx,dum
 
-        IF(H.GT.0.0d0) THEN
-          DUM=AMP*G/W1*DCOSH(WK*(Z+H))/DCOSH(WK*H)
-        ELSE
-          DUM=AMP*G/W1*DEXP(WK*Z)
-        ENDIF
-         
-         WKX=WK*( X*DCOS(BETA)+Y*DSIN(BETA))
-         POXY=DUM*DSIN(WKX-W1*TimeRK)
+        if(h.gt.0.0d0) then
+            dum=amp*g/w1*dcosh(wk*(z+h))/dcosh(wk*h)
+        else
+            dum=amp*g/w1*dexp(wk*z)
+        endif
+
+        wkx=wk*( x*dcos(beta)+y*dsin(beta))
+        poxy=dum*dsin(wkx-w1*timerk)
             
 
-!C             POXY = DCOS(X)*DSIN(Y)*DEXP(DSQRT(2.0D0)*Z)*DCOS(-W1*TimeRK)
-!C
+        !c             poxy = dcos(x)*dsin(y)*dexp(dsqrt(2.0d0)*z)*dcos(-w1*timerk)
+        !c
 
-! H   : water depth
-! Amp : amplitude of incident waves
-! BETA: incident angle
-! W1  : angular frequency of incident waves
-! V   : wave number in deep water
-! WK  : wave number
-! TPER: wave period
-! Tstep: time step
-! Time : simulation time at each time step
-! TimeRK: simulation time at each RK step
-! RampF: ramp function for incident potential
-! RampV: ramp function for damping
-!	   POXY=RAMPF*POXY
+        ! h   : water depth
+        ! amp : amplitude of incident waves
+        ! beta: incident angle
+        ! w1  : angular frequency of incident waves
+        ! v   : wave number in deep water
+        ! wk  : wave number
+        ! tper: wave period
+        ! tstep: time step
+        ! time : simulation time at each time step
+        ! timerk: simulation time at each rk step
+        ! rampf: ramp function for incident potential
+        ! rampv: ramp function for damping
+        !	   poxy=rampf*poxy
 
-        RETURN
-        END FUNCTION POXY
+        end function poxy
 !
 ! ----------------------------------------------
 
-!CTime Derivatives of incident wave potential
-!C  
+!ctime derivatives of incident wave potential
+!c  
 
-        FUNCTION DPOT(X,Y,Z)
-        USE mesh
-        IMPLICIT  NONE
-!
-	  REAL*8,INTENT(IN):: X,Y,Z
-        Real*8  DPOT
-	  REAL*8  WKX,DUM
-!CC
-        IF(H.GT.0.0d0) THEN
-          DUM=-AMP*G*DCOSH(WK*(Z+H))/DCOSH(WK*H)
-        ELSE
-          DUM=-AMP*G*DEXP(WK*Z)
-        ENDIF
-!
-         WKX=WK*( X*DCOS(BETA)+Y*DSIN(BETA))
-         DPOT=DUM*DCOS(WKX-W1*TimeRK)
-!C
-!	   DPOT=RAMPF*DPOT
-!C        DPOT = DCOS(X)*DSIN(Y)*DEXP(DSQRT(2.0D0)*Z)*DCOS(-W1*TimeRK)*-W1
+    function dpot(x,y,z)
+        use wave
+        implicit  none
 
-        RETURN
-        END FUNCTION DPOT
+        real*8,intent(in):: x,y,z
+        real*8  dpot
+        real*8  wkx,dum
+
+        if(h.gt.0.0d0) then
+            dum=-amp*g*dcosh(wk*(z+h))/dcosh(wk*h)
+        else
+            dum=-amp*g*dexp(wk*z)
+        endif
+
+        wkx=wk*( x*dcos(beta)+y*dsin(beta))
+        dpot=dum*dcos(wkx-w1*timerk)
+        !c
+        !	   dpot=rampf*dpot
+        !c        dpot = dcos(x)*dsin(y)*dexp(dsqrt(2.0d0)*z)*dcos(-w1*timerk)*-w1
+
+        end function dpot
 
 
 !
@@ -95,33 +94,34 @@ contains
 !CIORDER=1: for the first order potential
 !CIORDER=2: for the second order potential 
 
-        SUBROUTINE  DINP(X,Y,Z,DPOX,DPOY,DPOZ)
-        USE mesh
-	  IMPLICIT    NONE
-	  
-	  REAL*8,INTENT(IN)::   X,Y,Z
-        REAL*8,INTENT(OUT)::  DPOX,DPOY,DPOZ
+    subroutine  dinp(x,y,z,dpox,dpoy,dpoz)
 
-	  REAL*8 DUM,WKX
+        use wave
+        implicit    none
 
-         DUM=AMP*G/W1
-         WKX=WK*(X*DCOS(BETA)+Y*DSIN(BETA))
-		  
-		IF (H.GT.0.0d0) THEN           
-         DPOX= DUM*WK*DCOS(BETA)*&
-			   &DCOSH(WK*(Z+H))/DCOSH(WK*H)*DCOS(WKX-W1*TimeRK)
-         DPOY= DUM*WK*DSIN(BETA)*&
-			   &DCOSH(WK*(Z+H))/DCOSH(WK*H)*DCOS(WKX-W1*TimeRK)
-         DPOZ= DUM*WK*&
-			   &DSINH(WK*(Z+H))/DCOSH(WK*H)*DSIN(WKX-W1*TimeRK)
+        real*8,intent(in)::   x,y,z
+        real*8,intent(out)::  dpox,dpoy,dpoz
 
-        ELSE
-        
-         DPOX= DUM*WK*DCOS(BETA)*DEXP(WK*Z)*DCOS(WKX-W1*TimeRK)
-         DPOY= DUM*WK*DSIN(BETA)*DEXP(WK*Z)*DCOS(WKX-W1*TimeRK)
-         DPOZ= DUM*WK*DEXP(WK*Z)*DSIN(WKX-W1*TimeRK)
-        
-        ENDIF
+        real*8 dum,wkx
+
+        dum=amp*g/w1
+        wkx=wk*(x*dcos(beta)+y*dsin(beta))
+
+        if (h.gt.0.0d0) then           
+        dpox= dum*wk*dcos(beta)*&
+            &dcosh(wk*(z+h))/dcosh(wk*h)*dcos(wkx-w1*timerk)
+        dpoy= dum*wk*dsin(beta)*&
+            &dcosh(wk*(z+h))/dcosh(wk*h)*dcos(wkx-w1*timerk)
+        dpoz= dum*wk*&
+            &dsinh(wk*(z+h))/dcosh(wk*h)*dsin(wkx-w1*timerk)
+
+        else
+
+        dpox= dum*wk*dcos(beta)*dexp(wk*z)*dcos(wkx-w1*timerk)
+        dpoy= dum*wk*dsin(beta)*dexp(wk*z)*dcos(wkx-w1*timerk)
+        dpoz= dum*wk*dexp(wk*z)*dsin(wkx-w1*timerk)
+
+        endif
 !
 !	   DPOX=RAMPF*DPOX
 !	   DPOY=RAMPF*DPOY
@@ -138,8 +138,7 @@ contains
 !C      DPOY = 0
 !C      DPOZ = 0
 !
-        RETURN
-        END SUBROUTINE  DINP 
+        end subroutine  dinp 
         
         
 !

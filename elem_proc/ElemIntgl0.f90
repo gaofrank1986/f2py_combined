@@ -1,5 +1,6 @@
 module elem_intgl
     use mesh
+    use wave
     use extend_mesh
     use tripole_mod 
     implicit none
