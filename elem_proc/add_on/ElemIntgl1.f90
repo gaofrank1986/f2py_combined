@@ -266,9 +266,9 @@
 
 
 !    
-    write(110,*) '   ELEMT ID =',ielem
-    write(110,*) '   NODE ID =',INODE
-    write(13,*)   ielem,nodj,inode
+    !write(110,*) '   ELEMT ID =',ielem
+    !write(110,*) '   NODE ID =',INODE
+    !write(13,*)   ielem,nodj,inode
 
         write(debug_file_id,*) ' Inside SGWP0_1'
         write(debug_file_id,*) ' IS,INODE,IELEM,NODJ:',IS,INODE,IELEM,NODJ
@@ -417,11 +417,14 @@
 
 
 
-!
+        print *,"i am here"
         DO J=1, NCN(IELEM)
             AMATRIX(IS,J) = result0(J)
         END DO
-        write(110,*) '   sieppem result',result0
+        write(301,*) ielem,inode,nodj,is
+        write(300,1000)  result0
         write(110,*) 'sum of AMATRIX',SUM(AMATRIX(IS,1:8))
-        END
+
+1000    format(8f14.10)
+        end subroutine
                
